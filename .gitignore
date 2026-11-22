@@ -1,3 +1,7 @@
 node_modules/
 *.sqlite
 .env
+dist/
+.env.*
+coverage/
+logs/

@@ -56,6 +56,28 @@ npm test
 The dashboard initially shows zero tickets because it starts empty. Using
 `$env:SQLITE_PATH = "frontdesk.sqlite"` keeps tickets between server restarts.
 
+## Live deployed application
+
+The application is deployed at:
+
+- https://frontdesk-pnil.onrender.com/
+- Customer page: https://frontdesk-pnil.onrender.com/customer
+- Health check: https://frontdesk-pnil.onrender.com/healthz
+
+### Check the complete workflow
+
+1. Open the [customer page](https://frontdesk-pnil.onrender.com/customer).
+2. Enter the customer's name and email, a subject, a description, and a priority.
+3. Submit the request.
+4. Copy the private ticket link that appears after submission. This link is where the customer can view replies and send a follow-up.
+5. Open the [agent page](https://frontdesk-pnil.onrender.com/).
+6. Sign in with `meera@arvo.test` and the password configured for `SEED_PASSWORD` on Render. If `SEED_PASSWORD` was not set, use `frontdesk-demo`.
+7. Open the new ticket, claim it, add a private note, and send a public reply.
+8. Open the customer's private ticket link. Confirm that the public reply is visible and the private note is not visible.
+9. Resolve the ticket from the agent page. The customer link can also be used to reply to it and reopen it within the reopen window.
+
+All nine agent accounts use `<name>@arvo.test`, for example `arjun@arvo.test`, and the same `SEED_PASSWORD`. Meera is the support lead and can manage holidays.
+
 ## Put it online (Render, free)
 
 1. Push this folder to a GitHub repository.
